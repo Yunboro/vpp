@@ -1,7 +1,7 @@
 #ifndef KOMPONENTENLIST_H
 #define KOMPONENTENLIST_H
 
-#include "komponente.h"
+#include "komponentenelement.h"
 
 class KomponentenList
 {   
@@ -11,11 +11,14 @@ class KomponentenList
         KomponentenElement* getElement(int pos) const;
     
     public:
-        KomponentenListe();
+        KomponentenList();
         int size() const;
-        int Komponente const* at(int pos) const;
+        Komponente const* at(int pos) const;
         int erase(int pos);
         void push_back(Komponente k);
-        ~KomponentenListe();
+        KomponentenElement* end() const;
+        KomponentenElement* begin() const;
+        ~KomponentenList();
+};
 
 #endif //KOMPONENTENLIST_H

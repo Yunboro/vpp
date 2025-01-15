@@ -1,12 +1,13 @@
 #ifndef KOMPONENTENELEMENT_H
 #define KOMPONENTENELEMENT_H
 #include "komponente.h"
+#include <iostream>
 
-struct KomponenteElement
+struct KomponentenElement
 {
-    Komponente k;
-    KomponenteElement* before;
-    KomponenteElement* next;
+    Komponente* k;
+    KomponentenElement* before;
+    KomponentenElement* next;
 };
 
-endif //KOMPONENTENELEMENT_H
+#endif //KOMPONENTENELEMENT_H

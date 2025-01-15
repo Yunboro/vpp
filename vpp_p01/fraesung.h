@@ -8,7 +8,7 @@ class Fraesung : public Bohrung
         double length, angle;
 
     public:
-        Fraesung(double x_, double y_, double diam, double l, double a = 0.0): Bohrung(x_, y_, diam), length(l), angle(a) {}
+        Fraesung(double x_, double y_, double diam, double l, double a = 0.0);
 
         double getLength() const;
         double getAngle() const;

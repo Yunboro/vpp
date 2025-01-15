@@ -16,7 +16,7 @@ if(WIN32)
    message("------> System ist Win32")
    # fuer Windows sollten folgende Pfade und Variablen
    # gesetzt werden, diese an Ihr System anpassen
-   set(CMAKE_CXX_COMPILER "C:/Qt/Tools/mingw1120_64/bin/g++.exe")
+   set(CMAKE_CXX_COMPILER "C:/Qt/Tools/mingw810_64/bin/g++.exe")
 
    # !!!! Wenn Sie den MinGW Compiler verwenden stelle Sie 
    # sicher dass  die Umgebungsvariable 
@@ -79,7 +79,7 @@ project(aufgabentest LANGUAGES CXX)
 set(PROJECT_SOURCES
         komponente.h komponente.cpp
 		bohrung.h bohrung.cpp
-		fraesung.h fraseung.cpp
+		fraesung.h fraesung.cpp
 		komponentenelement.h komponentenelement.cpp
 		komponentenlist.h komponentenlist.cpp
 		p01test.h
