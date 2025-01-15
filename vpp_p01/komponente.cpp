@@ -1,19 +1,13 @@
 #include "komponente.h"
  
-class Komponente {
-    private:
-        double x, y;
 
-    public:
-        Komponente(double xPos = 0.0, double yPos = 0.0) : x(xPos) , y(yPos) {}
+Komponente::Komponente(double xPos, double yPos) : x(xPos) , y(yPos) {}
 
-        double getX() { return x;}
-        double getY() { return y;}
+double Komponente::getX() const { return x; }
+double Komponente::getY() const { return y; }
 
-        void output(std::ostream& os) {
-            os << "(" << x << "," << y <<")";
-        }
+void Komponente::output(std::ostream& os) const {
+    os << "(" << x << "," << y <<")";
+}
 
-        virtual ~Komponente() {}
-        
-};
+Komponente::~Komponente() {}

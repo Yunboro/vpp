@@ -8,12 +8,12 @@ class Bohrung : public Komponente
         double diameter;
 
     public:
-        Bohrung(double x_ = 0.0, double y_ = 0.0, double diam = 6.0) : Komponente(x_, y_), diameter(diam) {}
-        double getDiameter() const { return diameter; }
+        Bohrung(double x_ = 0.0, double y_ = 0.0, double diam = 6.0);
+        double getDiameter() const;
         virtual void output(std::ostream& os) const override;
-        ~Bohrung() {}
+        ~Bohrung();
         //nochmal virtual unnötig, da es in der Basisklasse schon virtual ist
-        //override gibt an, dass es eine Funktion in der Basisklasse gibt (Redundanz)
+        //override gibt an, dass es eine Funktion in der Basisklasse gibt (Redundanz), nur in Header nötig
 };
 
 #endif //BOHRUNG_H
