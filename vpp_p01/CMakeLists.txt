@@ -115,6 +115,7 @@ add_test(NAME aufgabentest COMMAND v3test)
 # Angabe aller Executables, die erstellt werden sollen zusammen mit
 # der Quell-Datei fuer main()
 add_executable(aufgabentest p01TestMain.cpp ${PROJECT_SOURCES} ${GTestFiles})
+add_executable(eigentest p01Main.cpp ${PROJECT_SOURCES} ${GTestFiles})
 
 # Angabe aller Bibliotheken (libraries, die beim Linken verwendet werden sollen)
 target_link_libraries(${PROJECT_NAME} PRIVATE Threads::Threads)

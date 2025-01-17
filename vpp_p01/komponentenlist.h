@@ -15,7 +15,7 @@ class KomponentenList
         int size() const;
         Komponente const* at(int pos) const;
         int erase(int pos);
-        void push_back(Komponente k);
+        void push_back(Komponente* k);
         KomponentenElement* end() const;
         KomponentenElement* begin() const;
         ~KomponentenList();

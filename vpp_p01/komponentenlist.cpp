@@ -30,23 +30,60 @@ Komponente const* KomponentenList::at(int pos) const
 int KomponentenList::erase(int pos)
 {
     if(pos < 0 || pos >= counter || counter == 0) return -1;
-    KomponentenElement* to_delete = getElement(pos);
+    
+    KomponentenElement* tmp = getElement(pos);
 
     if(pos == 0) {
         // Setze first auf das zweite Element
-        first = to_delete->next;
+        first = tmp->next;
         // Falls nicht das letzte Element gelöscht wird, setze den Vorgänger des neuen ersten Elements auf nullptr
         if(first != nullptr) {
-            first->prev = nullptr;
+            first->before = nullptr;
         }
-    } else {
-        to_delete->prev->next = to_delete->next;
-        if(to_delete->next != nullptr) {
-            to_delete->next->prev = to_delete->prev;
-        }
+        //Falls es keine Elemente mehr gibt, wird automatisch immer ein nullptr zurückgegeben, da dies das einzige Element ist
+    }else if(pos == counter - 1) {
+        //vorletztes Element holen
+        KomponentenElement* prev = tmp->before;
+        prev->next = nullptr;
+    }else {
+        //Element vorher und nachher holen
+        KomponentenElement* prev = tmp->before;
+        KomponentenElement* post = tmp->next;
+        prev->next = post;
+        post->before = prev;
     }
-
-    delete to_delete;
+    delete tmp;
     --counter;
-    return 0;
+    return pos;
+}
+
+void KomponentenList::push_back(Komponente* k)
+{
+    KomponentenElement* element_to_add = new KomponentenElement;
+    element_to_add->k = k;
+    element_to_add->before = nullptr;
+    element_to_add->next = nullptr;
+    if(counter == 0) {
+        first = element_to_add;
+    }
+    else {
+        element_to_add->before = getElement(counter - 1);
+        getElement(counter - 1)->next = element_to_add;
+    }
+    counter++;
+}
+
+//gesamte verkette Liste löschen
+KomponentenList::~KomponentenList()
+{
+    KomponentenElement* current = first;
+    //Schleife über alle Elemente
+    while(first != nullptr)
+    {
+        current = first->next;
+        //erstes Element löschen
+        delete first;
+        first = current;
+    }
+    counter = 0;
 }
