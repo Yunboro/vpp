@@ -1,0 +1,64 @@
+Donald Knuth;The Art of Computer Programming;1968;2
+David H. Ahl;Basic Computer Games;1973;3
+Ted Nelson;Computer Lib/Dream Machines;1974;4
+Tracy Kidder;The Soul of a New Machine;1981;9
+Peter McWilliams;The Word Processing Book;1982;1
+Peter Norton;Inside the IBM PC;1983;4
+Carol Kaehler;Macintosh;1984;10
+Michael Moritz;The Little Kingdom;1984;8
+Steven Levy;Hackers: Heroes of the Computer Revolution;1984;4
+Paul Freiberger and Michael Swaine;Fire in the Valley;1984;5
+Gayle Laakmann McDowell;Cracking the Coding Interview;2015;8
+Brian Christian, Tom Griffiths;Algorithms to Live By;2016;8
+Wladston Ferreira Filho;Computer Science Distilled;2017;9
+Roselyn Teukolsky;Barron's AP Computer Science A;2018;2
+Mr. Kevin P Hare;Computer Science Principles;2018;4
+Martin Erwig;Once Upon an Algorithm;2017;3
+Jay Wengrow;A Common-Sense Guide to Data Structures and Algorithms;2017;1
+John Zelle;Python Programming;2016;3
+Daniel Drescher;Blockchain Basics;2017;8
+Laurie Wallmark;Grace Hopper;2017;4
+Laurent Rosenfeld, Allen B. Downey;Think Perl 6 How to Think Like a Computer Scientist;2017;3
+Moksh Jawa;Decoding AP Computer Science A;2016;1
+Robert Sedgewick, Kevin Wayne;Computer Science An Interdisciplinary Approach;2016;8
+David Watson, Helen Williams;Cambridge IGCSE Computer Science;2015;4
+Sjaak Laan;IT Infrastructure Architecture;2017;2
+Robert Sedgewick, Kevin Wayne;Introduction to Programming in Java;2017;6
+Andrew Butterfield, Gerard Ekembe Ngondi, Anne Kerr;A Dictionary of Computer Science;2016;3
+Rob Nederpelt, Herman Geuvers;Type Theory and Formal Proof, an Introduction; 2014;2
+Bing Liu;Sentiment Analysis Mining Opinions, Sentiments, and Emotions;2015;1
+Tim Roughgarden;Twenty Lectures on Algorithmic Game Theory;2016;4
+J Clark Scott;But How Do It Know?;2009;10
+Dave Watson, Helen Williams;Cambridge IGCSE Computer Science;2015;7
+Abhay B Joshi;Learn CS Concepts with Scratch;2017;7
+Sylvia Libow Martinez, Gary S. Stager;Invent To Learn;2013;6
+Jessen Havill;Discovering Computer Science;2015;9
+David Liben-Nowel;Discrete Mathematics for Computer Science;2017;5
+Geoff Mulgan;Big Mind;2017;10
+Michio Shibuya, Takashi Tonagi, Office Sawa;The Manga Guide to Microprocessors;2017;10
+Max Bramer;Principles of Data Mining;2016;7
+Robert Layton, Paul A Watters;Automating Open Source Intelligence;2015;5
+Srinivasan Jagannathan, Nareg Sinenian;Algorithms & Data Structures in Python;2014;3
+Alexander K Hartmann;Big Practical Guide to Computer Simulations;2015;4
+Leon Schram;Multiple-Choice & Free-Response Questions in Preparation for the AP Computer Science Examination;2014;2
+Phyllis Wheeler;Computer Science Pure and Simple Book 1;2003;2
+Kristen Sosulski;Data Visualization Made Simple;2018;5
+Kentaro Toyama;Geek Heresy: Rescuing Social Change from the Cult of Technology;2015;7
+Frederick P. Brooks;The Mythical Man-Month;1995;7
+Steve Krug;Don't Make Me Think;2013;4
+Thomas H. Cormen;Introduction to Algorithms;2009;4
+Simon Singh;The Code Book;2000;6
+Brian Kernighan and Dennis Ritchie;he C Programming Language;1988;5
+Jeff Olson;The Slight Edge;2013;9
+Bob Burg;The Go-Giver;2015;7
+Spencer Johnson;Who Moved My Cheese;2002;2
+Gene Kim;The Phoenix Project;2013;7
+Sia Mohajer;The Little Book of Stupidity;2015;4
+Joel Spolsky;Joel on Software;2004;6
+Walter Isaacson;The Innovators;2015;7
+Nir Eyal;Hooked: How to Build Habit Forming Products;2014;7
+Katherine O'Keefe;Ethical Data and Information Management;2018;2
+Charles J Simon;Will Computers Revolt;2018;7
+Jonathan Levin;Mac OS X and iOS Internals;2012;4
+Donella H. Meadows;Thinking in Systems;2017;1
+Erich Gamma Richard Helm Ralph Johnson John Vlissides;Design Patterns:Elements of Reusable Object-Oriented Software;1997;1
