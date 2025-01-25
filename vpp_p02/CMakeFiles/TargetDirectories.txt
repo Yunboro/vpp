@@ -1,3 +1,0 @@
-C:/Qt/vpp/vpp_p02/CMakeFiles/aufgabentest.dir
-C:/Qt/vpp/vpp_p02/CMakeFiles/edit_cache.dir
-C:/Qt/vpp/vpp_p02/CMakeFiles/rebuild_cache.dir

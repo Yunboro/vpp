@@ -13,24 +13,23 @@ IKomponentenElement* DeList::getElement(Iterator it) const {
     return nullptr;
 }
 
-DeList::DeList(DeList const& rhs) : counter(rhs.counter), first(nullptr) {
-    auto* elem = rhs.first;
-    while(elem != nullptr) {
-        push_back(elem->k);
-        elem = elem->next;
+DeList::DeList(DeList const& rhs) : counter{rhs.size()}, first {nullptr} {
+    auto it = rhs.begin();
+    while(it != rhs.end()) {
+        push_back(*it);
+        ++it;
     }
 }
 
 DeList& DeList::operator=(DeList const& rhs) {
-    if(this == &rhs) {
-        return *this;
-    }
-    clear();
-    counter = rhs.counter;
-    auto* elem = rhs.first;
-    while(elem != nullptr) {
-        push_back(elem->k);
-        elem = elem->next;
+    if(this != &rhs)
+    {
+        clear();
+        Iterator it = rhs.begin();
+        while(it != rhs.end()) {
+            push_back(*it);
+            ++it;
+        }
     }
     return *this;
 }
@@ -52,10 +51,11 @@ int DeList::size() const {
 
 Iterator DeList::erase(Iterator pos) {
     auto* tmp = getElement(pos);
+    Iterator erg;
     if (tmp == nullptr) {
-        return Iterator();
+        return erg;
     }
-
+    erg = ++pos;    
     if (tmp == first) {
         first = tmp->next;
     } 
@@ -74,7 +74,9 @@ Iterator DeList::erase(Iterator pos) {
     }
     delete tmp;
     --counter;
-    return Iterator(tmp->next);
+    return erg;
+    //Use of memory after free
+    //return Iterator(tmp->next);
 }
 
 void DeList::push_back(IKomponente* k) {
@@ -97,8 +99,8 @@ void DeList::push_back(IKomponente* k) {
     ++counter;
 }
 
-Iterator DeList::end()const {
-    return Iterator();
+Iterator DeList::end() const {
+    return Iterator(nullptr);
 }
 
 Iterator DeList::begin() const {
