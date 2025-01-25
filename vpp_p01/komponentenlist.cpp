@@ -41,11 +41,13 @@ int KomponentenList::erase(int pos)
             first->before = nullptr;
         }
         //Falls es keine Elemente mehr gibt, wird automatisch immer ein nullptr zurückgegeben, da dies das einzige Element ist
-    }else if(pos == counter - 1) {
+    }
+    else if(pos == counter - 1) {
         //vorletztes Element holen
         KomponentenElement* prev = tmp->before;
         prev->next = nullptr;
-    }else {
+    }
+    else {
         //Element vorher und nachher holen
         KomponentenElement* prev = tmp->before;
         KomponentenElement* post = tmp->next;
