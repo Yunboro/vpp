@@ -78,7 +78,7 @@ project(aufgabentest LANGUAGES CXX)
 # bis auf die cpp-Datei mit main()
 set(PROJECT_SOURCES
         a04.h a04.cpp
-		hochlager.h
+		hochlager.h hochlager.cpp
 		iprodukt.h iprodukt.cpp
 		produkt.h produkt.cpp
 		produktmitpreishistory.h produktmitpreishistory.cpp
