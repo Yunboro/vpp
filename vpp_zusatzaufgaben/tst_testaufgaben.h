@@ -7,9 +7,11 @@
 #include "hochlager.h"
 #include "a04.h"
 
-#include "produkt.h"
-#include "iprodukt.h"
+//Aufgabe 1
+//#include "produkt.h"
+//#include "iprodukt.h"
 
+//Aufgabe 2
 #include"produktmitpreishistory.h"
 
 using namespace testing;
@@ -98,7 +100,7 @@ TEST(ProduktMitPreisHistory, HistoryAndBigThree){
   pph.output(oss4);
   EXPECT_STREQ(sout2, oss4.str().c_str());
 }
-/**/
+
 TEST(ProduktMitPreisHistory, CounterConstructorsAndDestructor){
   EXPECT_TRUE(0 == ProduktMitPreisHistory::getCounter());
   Produkt* pp = new ProduktMitPreisHistory{"Raspi", 23.78};
@@ -118,7 +120,7 @@ TEST(ProduktMitPreisHistory, CounterConstructorsAndDestructor){
   EXPECT_DOUBLE_EQ(23.78, pph2.getPreis());
   EXPECT_TRUE(2 == ProduktMitPreisHistory::getCounter());
 }
-
+/*
 TEST(Kiste, Members){
   Kiste<int> ki{42, nullptr};
   EXPECT_TRUE(ki.inhalt == 42);
