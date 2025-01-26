@@ -10,6 +10,8 @@
 #include "produkt.h"
 #include "iprodukt.h"
 
+#include"produktmitpreishistory.h"
+
 using namespace testing;
 
 TEST(IProduktAndProdukt, VirtualMethoden)
