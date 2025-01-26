@@ -6,6 +6,7 @@
 class ProduktMitPreisHistory : public Produkt {
     private:
         static const size_t N_PREISE_ALT = 5;
+        //Anzahl der Objekte vom Typ ProduktMitPreisHistory
         static size_t counter;
         size_t npreise;
         double* preise_alt;
@@ -14,8 +15,8 @@ class ProduktMitPreisHistory : public Produkt {
         //static-Methoden können nicht const sein
         static size_t getCounter();
         ProduktMitPreisHistory(std::string n, double p);
-        void setPreis(double p);
-        void output(std::ostream& os) const;
+        void setPreis(double p) override;
+        void output(std::ostream& os) const override;
         ProduktMitPreisHistory(const ProduktMitPreisHistory& rhs);
         ProduktMitPreisHistory& operator=(const ProduktMitPreisHistory& rhs);
         ~ProduktMitPreisHistory();

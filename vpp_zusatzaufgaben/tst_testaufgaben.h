@@ -46,7 +46,7 @@ TEST(Produkt, MethodenAndConst)
    rp.output(oss);
    EXPECT_STREQ(sout, oss.str().c_str());
 }
-/*
+
 TEST(ProduktMitPreisHistory, KonstruktorAndMethoden)
 {
   ProduktMitPreisHistory pph{"Raspi", 23.78};
@@ -74,6 +74,7 @@ TEST(ProduktMitPreisHistory, HistoryAndBigThree){
   std::ostringstream oss;
   pph.output(oss);
   EXPECT_STREQ(sout, oss.str().c_str());
+  
   ProduktMitPreisHistory pph2{pph};
   pph.setPreis(23.30);
   pph.setPreis(23.20);
@@ -97,7 +98,7 @@ TEST(ProduktMitPreisHistory, HistoryAndBigThree){
   pph.output(oss4);
   EXPECT_STREQ(sout2, oss4.str().c_str());
 }
-
+/**/
 TEST(ProduktMitPreisHistory, CounterConstructorsAndDestructor){
   EXPECT_TRUE(0 == ProduktMitPreisHistory::getCounter());
   Produkt* pp = new ProduktMitPreisHistory{"Raspi", 23.78};
