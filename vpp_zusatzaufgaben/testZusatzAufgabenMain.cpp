@@ -117,8 +117,8 @@ void mymain() {
     //a01();
     //a02_1();
     //a02_2();
-    a03();
-    //a04(); //Folge endet immer auf 4, 2, 1
+    //a03();
+    a04(); //Folge endet immer auf 4, 2, 1
 }
 
 int main(int argc, char *argv[]) {

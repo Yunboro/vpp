@@ -1,9 +1,16 @@
 #ifndef A04_H
 #define A04_H
 
+#include <functional>
+
+// Definition des neuen Typs TFC
+using TFC = std::function<bool(int)>;
+//typedef std::function<bool(int)> TFC;
+using TFP = bool (*)(int);
+
 //Erste Ü-Param is Generator, zweite ist Prädikat
 template <class G, class P>
-int laenge(G& g, P& p) {
+int laenge(G& g, P p) {
     //Rufe g() auf, bis p(g()) == false, dann break
     int length = 0;
     while(true) {
@@ -23,7 +30,6 @@ class PCollatz {
             return n != 1;
         }
 };
-
 
 class Collatz {
 private:

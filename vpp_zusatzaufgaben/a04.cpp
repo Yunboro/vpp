@@ -34,4 +34,38 @@ void a04() {
         std::cout << *it << " ";
     }
     std::cout << std::endl;
+
+    // Erstellen Sie ein neues Generator-Objekt cfunk vom Typ Collatz mit Startwert 100
+    Collatz cfunk(100);
+
+    // Erstellen Sie ein Prädikat pc vom Typ PCollatz
+    PCollatz pc;
+
+    // Rufen Sie das Funktions-Template laenge()
+    // mit cfunk und pc, benutzen Generator verändert cfunk
+    int result = laenge(cfunk, pc);
+    std::cout << "Laenge der Collatz-Folge: " << result << std::endl;
+
+    // Definieren Sie eine Variable fc vom Typ TFC und initialisieren Sie sie mit dem Prädikat pc
+    TFC fc = [&pc](int n) { return pc(n); };
+    //----
+    // Erstellen Sie ein neues Generator-Objekt cfunk2 vom Typ Collatz mit Startwert 100
+    Collatz cfunk2(100);
+
+    // Rufen Sie erneut das Funktions-Template laenge() auf
+    result = laenge(cfunk2, pc);
+    std::cout << "Laenge der Collatz-Folge (mit neuem Generator): " << result << std::endl;
+    //----
+    // Laenge mit lambda-Ausdruck
+    Collatz clam(100);
+
+    result = laenge(clam, [](int n) { return n!=1; });
+    std::cout << "Laenge der Collatz-Folge (mit Lambda): " << result << std::endl;
+
+    Collatz clam2{100};
+    TFP fc2 = [](int n) { return n!=1; };
+    result = laenge(clam2, fc2);
+    std::cout << "Laenge der Collatz-Folge (mit Funktor): " << result << std::endl;
+
+
 }

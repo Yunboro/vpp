@@ -8,7 +8,7 @@
 #include "a04.h"
 
 using namespace testing;
-/*
+
 TEST(IProduktAndProdukt, VirtualMethoden)
 {
   Produkt p1{"PiPico", 4.99};
@@ -113,7 +113,7 @@ TEST(ProduktMitPreisHistory, CounterConstructorsAndDestructor){
   EXPECT_DOUBLE_EQ(23.78, pph2.getPreis());
   EXPECT_TRUE(2 == ProduktMitPreisHistory::getCounter());
 }
-*/
+
 TEST(Kiste, Members){
   Kiste<int> ki{42, nullptr};
   EXPECT_TRUE(ki.inhalt == 42);
@@ -232,7 +232,7 @@ TEST(Aufgabe4, PraedikatPCollatz){
   EXPECT_TRUE(pcol(42));
   EXPECT_FALSE(pcol(1));
 }
-/*
+
 TEST(Aufgabe4, LaengeFunktor){
   Collatz c100{100};
   PCollatz pcollatz{};
@@ -244,7 +244,7 @@ TEST(Aufgabe4, LaengeFunctional){
   TFC fc = [](int a){return a != 1;};
   EXPECT_TRUE(laenge(c100, fc) == 25);
 }
-
+/*
 TEST(Aufgabe4, LaengeFunctionPointer){
   Collatz c100{100};
   TFP fp = pcollatz;
