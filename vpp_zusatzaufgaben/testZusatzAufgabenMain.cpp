@@ -80,10 +80,45 @@ void a02_2() {
     delete heapObj;
 }
 
+void a03() {
+    HochLager<Produkt> lager1{};
+
+    // Produkte hinzufügen
+    Produkt p1("Apfel", 1.20);
+    Produkt p2("Banane", 0.80);
+    Produkt p3("Orange", 1.50);
+    Produkt p4("Apfel", 1.20);
+    Produkt p5("Banane", 0.80);
+
+    lager1 += p1;
+    lager1 += p2;
+    lager1 += p3;
+    lager1 += p4;
+    lager1 += p5;
+
+    // Inventar ausgeben
+    std::ostringstream oss;
+    lager1.printInventarAufsteigendNachPreis(oss);
+    std::cout << "Inventar aufsteigend nach Preis sortiert:\n" << oss.str() << std::endl;
+
+    std::cout << "Anzahl von Banane: " << lager1.getAnzahl(p2) << std::endl;
+    // Produkt entfernen (Beispiel, Implementierung von operator-= fehlt)
+    lager1 -= p2;
+    std::cout << "Anzahl von Banane: " << lager1.getAnzahl(p5) << std::endl;
+    lager1 -= p2;
+    std::cout << "Anzahl von Banane: " << lager1.getAnzahl(p5) << std::endl;
+
+    Produkt p0{"Trafo", 17.89};
+    HochLager<Produkt> lager{};
+    std::cout << "Anzahl in Lager: " << lager.getAnzahl(p0) << std::endl;
+}
+
 void mymain() {
     //a01();
     //a02_1();
     //a02_2();
+    a03();
+    //a04(); //Folge endet immer auf 4, 2, 1
 }
 
 int main(int argc, char *argv[]) {

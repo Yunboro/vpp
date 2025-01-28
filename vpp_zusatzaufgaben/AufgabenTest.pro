@@ -18,6 +18,7 @@ HEADERS += \     \
 
 SOURCES +=     \
     a04.cpp \
+    hochlager.cpp \
     iprodukt.cpp \
     produkt.cpp \
     produktmitpreishistory.cpp \

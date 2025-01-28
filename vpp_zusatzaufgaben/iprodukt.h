@@ -15,4 +15,9 @@ class IProdukt
         virtual ~IProdukt();
 };
 
+inline std::ostream& operator<<(std::ostream& os, const IProdukt& ip) {
+    ip.output(os);
+    return os;
+}
+
 #endif //IPRODUKT_H

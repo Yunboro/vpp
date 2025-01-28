@@ -7,15 +7,8 @@
 #include "hochlager.h"
 #include "a04.h"
 
-//Aufgabe 1
-//#include "produkt.h"
-//#include "iprodukt.h"
-
-//Aufgabe 2
-#include"produktmitpreishistory.h"
-
 using namespace testing;
-
+/*
 TEST(IProduktAndProdukt, VirtualMethoden)
 {
   Produkt p1{"PiPico", 4.99};
@@ -120,7 +113,7 @@ TEST(ProduktMitPreisHistory, CounterConstructorsAndDestructor){
   EXPECT_DOUBLE_EQ(23.78, pph2.getPreis());
   EXPECT_TRUE(2 == ProduktMitPreisHistory::getCounter());
 }
-/*
+*/
 TEST(Kiste, Members){
   Kiste<int> ki{42, nullptr};
   EXPECT_TRUE(ki.inhalt == 42);
@@ -145,8 +138,10 @@ TEST(HochLager, Members){
   lager+= p1;
   EXPECT_TRUE(lager.getAnzahl(p1) == 1);
   EXPECT_DOUBLE_EQ(lager.getMaxPreis(), 17.89);
+  
   const char* sout1 = "Name: Trafo     , Preis:     17.89 :   1\n";
   std::ostringstream oss1;
+
   lager.printInventarAufsteigendNachPreis(oss1);
   EXPECT_STREQ(sout1, oss1.str().c_str());
   const char* sout2 = "Name: PiPico    , Preis:      4.99 :   2\n"
@@ -168,6 +163,7 @@ TEST(HochLager, Members){
   lager.printInventarAufsteigendNachPreis(oss2);
   EXPECT_STREQ(sout2, oss2.str().c_str());
   EXPECT_DOUBLE_EQ(lager.getMaxPreis(), 49.56);
+  
   Produkt perg1 = lager -= p4;
   EXPECT_STREQ(perg1.getName().c_str(), p4.getName().c_str());
   Produkt perg2 = (lager -= pph);
@@ -178,6 +174,7 @@ TEST(HochLager, Members){
   std::ostringstream oss3;
   lager.printInventarAufsteigendNachPreis(oss3);
   EXPECT_STREQ(sout3, oss3.str().c_str());
+  
   perg2 = (lager -= p2);
   EXPECT_STREQ(perg2.getName().c_str(), p2.getName().c_str());
   EXPECT_TRUE(lager.getAnzahl(p2) == 2);
@@ -235,7 +232,7 @@ TEST(Aufgabe4, PraedikatPCollatz){
   EXPECT_TRUE(pcol(42));
   EXPECT_FALSE(pcol(1));
 }
-
+/*
 TEST(Aufgabe4, LaengeFunktor){
   Collatz c100{100};
   PCollatz pcollatz{};
@@ -267,7 +264,5 @@ TEST(Aufgabe4, MaxLaenge){
   n_max = maxLaenge<1000, Collatz>(pcolFunktor);
   EXPECT_TRUE(n_max == 871);
 }
-
-
 
 */
